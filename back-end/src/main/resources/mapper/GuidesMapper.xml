@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhao.travelguide.server.mapper.GuidesMapper">
+
+    <select id="getFavoriteGuidesByUserId" resultType="com.zhao.travelguide.pojo.vo.me.GetFavoriteGuidesByUserIdVO">
+        SELECT g.id AS guideId, g.title, g.cover, g.content, g.create_time AS createTime,
+        u.id AS authorId, u.nickname AS authorNickname, u.avatar AS authorAvatar,
+        gas.name AS auditStatus,
+        COALESCE(gl.likes_count, 0) AS likesCount,
+        COALESCE(gf.favorites_count, 0) AS favoritesCount,
+        COALESCE(gc.comments_count, 0) AS commentsCount
+        FROM guides g
+        JOIN users u ON g.users_id = u.id
+        JOIN guides_audit_status gas ON g.guides_audit_status_id = gas.id
+        LEFT JOIN (
+        SELECT guides_id, COUNT(*) AS likes_count
+        FROM guides_likes
+        GROUP BY guides_id
+        ) gl ON g.id = gl.guides_id
+        LEFT JOIN (
+        SELECT guides_id, COUNT(*) AS favorites_count
+        FROM guides_favorites
+        GROUP BY guides_id
+        ) gf ON g.id = gf.guides_id
+        LEFT JOIN (
+        SELECT guides_id, COUNT(*) AS comments_count
+        FROM guides_comments
+        GROUP BY guides_id
+        ) gc ON g.id = gc.guides_id
+        JOIN guides_favorites gfav ON g.id = gfav.guides_id
+        WHERE gfav.users_id = #{userId}
+        ORDER BY g.create_time DESC
+    </select>
+
+</mapper>
