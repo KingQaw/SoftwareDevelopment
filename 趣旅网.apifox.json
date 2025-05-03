@@ -1,0 +1,3598 @@
+{
+  "apifoxProject": "1.0.0",
+  "$schema": {
+    "app": "apifox",
+    "type": "project",
+    "version": "1.2.0"
+  },
+  "info": {
+    "name": "趣旅网",
+    "description": "",
+    "mockRule": {
+      "rules": [],
+      "enableSystemRule": true
+    }
+  },
+  "apiCollection": [
+    {
+      "name": "根目录",
+      "id": 53832035,
+      "auth": {},
+      "securityScheme": {},
+      "parentId": 0,
+      "serverId": "",
+      "description": "",
+      "identityPattern": {
+        "httpApi": {
+          "type": "methodAndPath",
+          "bodyType": "",
+          "fields": []
+        }
+      },
+      "shareSettings": {},
+      "visibility": "SHARED",
+      "preProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "postProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "inheritPostProcessors": {},
+      "inheritPreProcessors": {},
+      "items": [
+        {
+          "name": "注册登陆",
+          "id": 53856243,
+          "auth": {},
+          "securityScheme": {},
+          "parentId": 0,
+          "serverId": "",
+          "description": "",
+          "identityPattern": {
+            "httpApi": {
+              "type": "inherit",
+              "bodyType": "",
+              "fields": []
+            }
+          },
+          "shareSettings": {},
+          "visibility": "INHERITED",
+          "preProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "postProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "inheritPostProcessors": {},
+          "inheritPreProcessors": {},
+          "items": [
+            {
+              "name": "登陆",
+              "api": {
+                "id": "280288692",
+                "method": "post",
+                "path": "/auth/login",
+                "parameters": {},
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "648535473",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JR2FQY00NFWH3FT3SAGNRZY1"
+                      ],
+                      "type": "object",
+                      "x-apifox-refs": {
+                        "01JR2FQY00NFWH3FT3SAGNRZY1": {
+                          "$ref": "#/definitions/158054285",
+                          "x-apifox-overrides": {
+                            "data": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "integer",
+                                  "title": "主键",
+                                  "x-apifox-mock": "0"
+                                },
+                                "nickname": {
+                                  "type": "string",
+                                  "title": "昵称"
+                                },
+                                "account": {
+                                  "type": "string",
+                                  "title": "账号"
+                                },
+                                "token": {
+                                  "type": "string",
+                                  "title": "JWT token"
+                                },
+                                "role": {
+                                  "type": "string",
+                                  "title": "角色"
+                                },
+                                "avatar": {
+                                  "type": "string",
+                                  "title": "头像",
+                                  "format": "base64"
+                                }
+                              },
+                              "x-apifox-orders": [
+                                "id",
+                                "nickname",
+                                "avatar",
+                                "account",
+                                "role",
+                                "token"
+                              ],
+                              "title": "承载的数据",
+                              "required": [
+                                "id",
+                                "nickname",
+                                "account",
+                                "token",
+                                "role",
+                                "avatar"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "data"
+                          ]
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {
+                      "account": {
+                        "type": "string",
+                        "title": "账号"
+                      },
+                      "password": {
+                        "type": "string",
+                        "title": "密码"
+                      }
+                    },
+                    "x-apifox-orders": [
+                      "account",
+                      "password"
+                    ],
+                    "required": [
+                      "account",
+                      "password"
+                    ]
+                  },
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "\n| code | 含义 |\n| --- | --- |\n| 0 | 成功 |\n| 1 | 账号或密码错误 |\n| 2 | 账号被封禁 |\n",
+                "tags": [],
+                "status": "released",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 10,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.648535473"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "注册",
+              "api": {
+                "id": "280303298",
+                "method": "post",
+                "path": "/auth/register",
+                "parameters": {},
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "648615379",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JR2X1ZW2SFAW9MXXHC9WSHK7"
+                      ],
+                      "x-apifox-refs": {
+                        "01JR2X1ZW2SFAW9MXXHC9WSHK7": {
+                          "$ref": "#/definitions/158054285",
+                          "x-apifox-overrides": {
+                            "data": {
+                              "type": "object",
+                              "properties": {
+                                "account": {
+                                  "type": "string",
+                                  "title": "账号"
+                                },
+                                "nickname": {
+                                  "type": "string",
+                                  "title": "昵称"
+                                },
+                                "role": {
+                                  "type": "string",
+                                  "title": "角色"
+                                },
+                                "id": {
+                                  "type": "integer",
+                                  "title": "主键"
+                                }
+                              },
+                              "x-apifox-orders": [
+                                "id",
+                                "account",
+                                "nickname",
+                                "role"
+                              ],
+                              "title": "承载的数据",
+                              "required": [
+                                "account",
+                                "nickname",
+                                "role",
+                                "id"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "data"
+                          ]
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {
+                      "account": {
+                        "type": "string",
+                        "title": "账号"
+                      },
+                      "password": {
+                        "type": "string",
+                        "title": "密码"
+                      },
+                      "nickname": {
+                        "type": "string",
+                        "title": "昵称"
+                      }
+                    },
+                    "x-apifox-orders": [
+                      "account",
+                      "password",
+                      "nickname"
+                    ],
+                    "required": [
+                      "account",
+                      "password",
+                      "nickname"
+                    ]
+                  },
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "\n| code | 内容 |\n| --- | --- |\n| 0 | 成功 |\n| 1 | 账号重复 |\n| 2 | 昵称违规 |",
+                "tags": [],
+                "status": "released",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 10,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.648615379"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            }
+          ]
+        },
+        {
+          "name": "攻略相关",
+          "id": 53859769,
+          "auth": {},
+          "securityScheme": {},
+          "parentId": 0,
+          "serverId": "",
+          "description": "",
+          "identityPattern": {
+            "httpApi": {
+              "type": "inherit",
+              "bodyType": "",
+              "fields": []
+            }
+          },
+          "shareSettings": {},
+          "visibility": "INHERITED",
+          "preProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "postProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "inheritPostProcessors": {},
+          "inheritPreProcessors": {},
+          "items": [
+            {
+              "name": "发布攻略",
+              "api": {
+                "id": "280303726",
+                "method": "post",
+                "path": "/guides",
+                "parameters": {},
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {}
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "648627437",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JR2XE4FPN654Z1XX1QSV97YM"
+                      ],
+                      "required": [],
+                      "x-apifox-refs": {
+                        "01JR2XE4FPN654Z1XX1QSV97YM": {
+                          "$ref": "#/definitions/158054285",
+                          "x-apifox-overrides": {
+                            "data": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "integer",
+                                  "title": "主键"
+                                }
+                              },
+                              "x-apifox-orders": [
+                                "id"
+                              ],
+                              "title": "承载的数据",
+                              "required": [
+                                "id"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "data"
+                          ]
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string",
+                        "title": "标题"
+                      },
+                      "cover": {
+                        "type": "string",
+                        "format": "base64",
+                        "title": "封面"
+                      },
+                      "content": {
+                        "type": "string",
+                        "title": "内容"
+                      }
+                    },
+                    "x-apifox-orders": [
+                      "title",
+                      "cover",
+                      "content"
+                    ],
+                    "required": [
+                      "title",
+                      "cover",
+                      "content"
+                    ]
+                  },
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "\n| code | 内容 |\n| --- | --- |\n| 0 | 成功 |\n",
+                "tags": [],
+                "status": "released",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 10,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.648627437"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "查询攻略",
+              "api": {
+                "id": "280303831",
+                "method": "get",
+                "path": "/guides",
+                "parameters": {
+                  "query": [
+                    {
+                      "required": false,
+                      "description": "标题",
+                      "type": "string",
+                      "id": "5Ka1vjQrpQ",
+                      "enable": true,
+                      "name": "title"
+                    },
+                    {
+                      "required": false,
+                      "description": "排序方式",
+                      "type": "string",
+                      "id": "r9dSjolxKP",
+                      "enable": true,
+                      "name": "orders"
+                    },
+                    {
+                      "required": false,
+                      "description": "页号",
+                      "type": "integer",
+                      "id": "JJXURKnZSi",
+                      "enable": true,
+                      "name": "page",
+                      "schema": {
+                        "type": "integer"
+                      }
+                    },
+                    {
+                      "required": false,
+                      "description": "页尺寸",
+                      "type": "integer",
+                      "id": "trjnrsj3Lh",
+                      "enable": true,
+                      "name": "size",
+                      "schema": {
+                        "type": "integer"
+                      }
+                    },
+                    {
+                      "required": false,
+                      "description": "搜索范围开始时间",
+                      "type": "string",
+                      "id": "f6fhSFz6L4",
+                      "enable": true,
+                      "name": "startAt"
+                    },
+                    {
+                      "required": false,
+                      "description": "搜索范围结束时间",
+                      "type": "string",
+                      "id": "KTLtTyq3j0",
+                      "enable": true,
+                      "name": "endAt"
+                    }
+                  ]
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {}
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "648627838",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JR2XQ2S13CJKS3ZBY2S53FRR"
+                      ],
+                      "required": [],
+                      "x-apifox-refs": {
+                        "01JR2XQ2S13CJKS3ZBY2S53FRR": {
+                          "$ref": "#/definitions/158054285",
+                          "x-apifox-overrides": {
+                            "data": {
+                              "type": "object",
+                              "properties": {},
+                              "x-apifox-orders": [
+                                "01JR2Y37M134FCS4XVDMP3VTBC"
+                              ],
+                              "title": "承载的数据",
+                              "required": [],
+                              "x-apifox-refs": {
+                                "01JR2Y37M134FCS4XVDMP3VTBC": {
+                                  "$ref": "#/definitions/158059832",
+                                  "x-apifox-overrides": {
+                                    "records": {
+                                      "type": [
+                                        "array",
+                                        "null"
+                                      ],
+                                      "items": {
+                                        "type": "object",
+                                        "properties": {
+                                          "id": {
+                                            "type": "integer",
+                                            "title": "攻略id"
+                                          },
+                                          "title": {
+                                            "type": "string",
+                                            "title": "标题"
+                                          },
+                                          "cover": {
+                                            "type": "string",
+                                            "format": "base64",
+                                            "title": "封面"
+                                          },
+                                          "author": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "integer",
+                                                "title": "作者id"
+                                              },
+                                              "avatar": {
+                                                "type": "string",
+                                                "format": "base64",
+                                                "title": "头像"
+                                              },
+                                              "nickname": {
+                                                "type": "string",
+                                                "title": "昵称"
+                                              }
+                                            },
+                                            "x-apifox-orders": [
+                                              "id",
+                                              "nickname",
+                                              "avatar"
+                                            ],
+                                            "title": "作者",
+                                            "required": [
+                                              "id",
+                                              "avatar",
+                                              "nickname"
+                                            ]
+                                          },
+                                          "createTime": {
+                                            "type": "string",
+                                            "title": "发布时间"
+                                          },
+                                          "likeCount": {
+                                            "type": "integer",
+                                            "title": "点赞数"
+                                          },
+                                          "favoriteCount": {
+                                            "type": "integer",
+                                            "title": "收藏数"
+                                          },
+                                          "commentCount": {
+                                            "type": "integer",
+                                            "title": "评论数"
+                                          },
+                                          "isLiked": {
+                                            "type": "boolean",
+                                            "title": "点赞过"
+                                          },
+                                          "isFavorited": {
+                                            "type": "boolean",
+                                            "title": "收藏过"
+                                          }
+                                        },
+                                        "x-apifox-orders": [
+                                          "id",
+                                          "title",
+                                          "cover",
+                                          "author",
+                                          "createTime",
+                                          "likeCount",
+                                          "favoriteCount",
+                                          "commentCount",
+                                          "isLiked",
+                                          "isFavorited"
+                                        ],
+                                        "required": [
+                                          "id",
+                                          "title",
+                                          "cover",
+                                          "author",
+                                          "createTime",
+                                          "likeCount",
+                                          "favoriteCount",
+                                          "commentCount",
+                                          "isLiked",
+                                          "isFavorited"
+                                        ]
+                                      },
+                                      "title": "数据数组"
+                                    }
+                                  },
+                                  "required": [
+                                    "records"
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          "required": [
+                            "data"
+                          ]
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "返回已经通过审核的攻略，未审核和待审核攻略不返回",
+                "tags": [],
+                "status": "released",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 20,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.648627838"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "获取攻略详情",
+              "api": {
+                "id": "280305139",
+                "method": "get",
+                "path": "/guides/{id}",
+                "parameters": {
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "required": true,
+                      "description": "",
+                      "type": "string",
+                      "enable": true
+                    }
+                  ]
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {}
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "648631333",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JR2YZTG84ESGCFZNP8TC841D"
+                      ],
+                      "required": [],
+                      "x-apifox-refs": {
+                        "01JR2YZTG84ESGCFZNP8TC841D": {
+                          "$ref": "#/definitions/158054285",
+                          "x-apifox-overrides": {
+                            "data": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "integer",
+                                  "title": "攻略id"
+                                },
+                                "title": {
+                                  "type": "string",
+                                  "title": "标题"
+                                },
+                                "cover": {
+                                  "type": "string",
+                                  "format": "base64",
+                                  "title": "封面"
+                                },
+                                "content": {
+                                  "type": "string",
+                                  "title": "内容"
+                                },
+                                "createTime": {
+                                  "type": "string",
+                                  "title": "发布时间"
+                                },
+                                "likeCount": {
+                                  "type": "integer",
+                                  "title": "点赞数"
+                                },
+                                "favoriteCount": {
+                                  "type": "integer",
+                                  "title": "收藏数"
+                                },
+                                "commentCount": {
+                                  "type": "integer",
+                                  "title": "评论数"
+                                },
+                                "author": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string",
+                                      "title": "作者id"
+                                    },
+                                    "nickname": {
+                                      "type": "string",
+                                      "title": "昵称"
+                                    },
+                                    "avatar": {
+                                      "type": "string",
+                                      "format": "base64",
+                                      "title": "头像"
+                                    }
+                                  },
+                                  "x-apifox-orders": [
+                                    "id",
+                                    "nickname",
+                                    "avatar"
+                                  ],
+                                  "required": [
+                                    "id",
+                                    "nickname",
+                                    "avatar"
+                                  ],
+                                  "title": "作者"
+                                },
+                                "isLiked": {
+                                  "type": "boolean",
+                                  "title": "点赞过"
+                                },
+                                "isFavorited": {
+                                  "type": "boolean",
+                                  "title": "收藏过"
+                                }
+                              },
+                              "x-apifox-orders": [
+                                "id",
+                                "author",
+                                "title",
+                                "cover",
+                                "content",
+                                "createTime",
+                                "likeCount",
+                                "favoriteCount",
+                                "commentCount",
+                                "isLiked",
+                                "isFavorited"
+                              ],
+                              "title": "承载的数据",
+                              "required": [
+                                "id",
+                                "title",
+                                "cover",
+                                "content",
+                                "createTime",
+                                "likeCount",
+                                "favoriteCount",
+                                "commentCount",
+                                "author",
+                                "isLiked",
+                                "isFavorited"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "data"
+                          ]
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "对于未审核通过的攻略不能返回\n\n| code | 内容 |\n| --- | --- |\n| 0 | 成功 |\n| 1 | 未审核通过|\n| 2 | 该攻略已下架或不存在 |\n",
+                "tags": [],
+                "status": "released",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 30,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.648631333"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "获取评论列表",
+              "api": {
+                "id": "280305871",
+                "method": "get",
+                "path": "/guides/{id}/comments",
+                "parameters": {
+                  "query": [
+                    {
+                      "required": false,
+                      "description": "页号",
+                      "type": "integer",
+                      "id": "jBqN6xedDN",
+                      "enable": true,
+                      "name": "page",
+                      "schema": {
+                        "type": "integer"
+                      }
+                    },
+                    {
+                      "required": false,
+                      "description": "页尺寸",
+                      "type": "integer",
+                      "id": "kQ6qFQfZiV",
+                      "enable": true,
+                      "name": "size",
+                      "schema": {
+                        "type": "integer"
+                      }
+                    }
+                  ],
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "required": true,
+                      "description": "",
+                      "type": "string",
+                      "enable": true
+                    }
+                  ]
+                },
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "648630044",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JR2ZFEERFD1T0W601KCEP98Z"
+                      ],
+                      "required": [],
+                      "x-apifox-refs": {
+                        "01JR2ZFEERFD1T0W601KCEP98Z": {
+                          "$ref": "#/definitions/158054285",
+                          "x-apifox-overrides": {
+                            "data": {
+                              "type": "object",
+                              "properties": {},
+                              "x-apifox-orders": [
+                                "01JR2ZFTS1PS2X4X556TPEN448"
+                              ],
+                              "title": "承载的数据",
+                              "required": [],
+                              "x-apifox-refs": {
+                                "01JR2ZFTS1PS2X4X556TPEN448": {
+                                  "$ref": "#/definitions/158059832",
+                                  "x-apifox-overrides": {
+                                    "records": {
+                                      "type": [
+                                        "array",
+                                        "null"
+                                      ],
+                                      "items": {
+                                        "type": "object",
+                                        "properties": {
+                                          "id": {
+                                            "type": "integer",
+                                            "title": "评论id"
+                                          },
+                                          "author": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "integer",
+                                                "title": "评论者id"
+                                              },
+                                              "nickname": {
+                                                "type": "string",
+                                                "title": "昵称"
+                                              },
+                                              "avatar": {
+                                                "type": "string",
+                                                "format": "base64",
+                                                "title": "头像"
+                                              }
+                                            },
+                                            "x-apifox-orders": [
+                                              "id",
+                                              "nickname",
+                                              "avatar"
+                                            ],
+                                            "title": "评论者",
+                                            "required": [
+                                              "id",
+                                              "nickname",
+                                              "avatar"
+                                            ]
+                                          },
+                                          "content": {
+                                            "type": "string",
+                                            "title": "内容"
+                                          },
+                                          "createTime": {
+                                            "type": "string",
+                                            "title": "评论时间"
+                                          }
+                                        },
+                                        "x-apifox-orders": [
+                                          "id",
+                                          "author",
+                                          "content",
+                                          "createTime"
+                                        ],
+                                        "required": [
+                                          "id",
+                                          "author",
+                                          "content",
+                                          "createTime"
+                                        ]
+                                      },
+                                      "title": "数据数组"
+                                    }
+                                  },
+                                  "required": [
+                                    "records"
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          "required": [
+                            "data"
+                          ]
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "released",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 40,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.648630044"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "点赞攻略",
+              "api": {
+                "id": "280309072",
+                "method": "post",
+                "path": "/guides/{id}/like",
+                "parameters": {
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "required": true,
+                      "description": "",
+                      "type": "string",
+                      "enable": true
+                    }
+                  ]
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {}
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "648632946",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JR31S6WJTT59RC923GS532BW"
+                      ],
+                      "required": [],
+                      "x-apifox-refs": {
+                        "01JR31S6WJTT59RC923GS532BW": {
+                          "$ref": "#/definitions/158054285"
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {},
+                    "x-apifox-orders": []
+                  },
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "\n| code | 内容 |\n| --- | --- |\n| 0 | 成功 |\n| 1 | 该攻略不存在 |\n| 2 | 已点赞过 |\n| 3 | 不能对自己的攻略点赞 |\n",
+                "tags": [],
+                "status": "released",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 50,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.648632946"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "取消点赞攻略",
+              "api": {
+                "id": "280309091",
+                "method": "delete",
+                "path": "/guides/{id}/like",
+                "parameters": {
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "required": true,
+                      "description": "",
+                      "type": "string",
+                      "enable": true
+                    }
+                  ]
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {}
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "648631750",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JR31WWEMTE7KKND8GNCV6ATS"
+                      ],
+                      "required": [],
+                      "x-apifox-refs": {
+                        "01JR31WWEMTE7KKND8GNCV6ATS": {
+                          "$ref": "#/definitions/158054285"
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "\n| code | 内容 |\n| --- | --- |\n| 0 | 成功 |\n| 1 | 攻略不存在 |\n| 2 | 未点赞 |\n",
+                "tags": [],
+                "status": "released",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 60,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.648631750"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "收藏攻略",
+              "api": {
+                "id": "280309113",
+                "method": "post",
+                "path": "/guides/{id}/favorite",
+                "parameters": {
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "required": true,
+                      "description": "",
+                      "type": "string",
+                      "enable": true
+                    }
+                  ]
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {}
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "648629762",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JR31ZWHVFJM41KSXNGTF4JH5"
+                      ],
+                      "required": [],
+                      "x-apifox-refs": {
+                        "01JR31ZWHVFJM41KSXNGTF4JH5": {
+                          "$ref": "#/definitions/158054285"
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "\n| code | 内容 |\n| --- | --- |\n| 0 | 成功 |\n| 1 | 该攻略不存在 |\n| 2 | 已收藏过 |\n| 3 | 不能对自己的攻略收藏 |\n",
+                "tags": [],
+                "status": "released",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 70,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.648629762"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "取消收藏攻略",
+              "api": {
+                "id": "280309160",
+                "method": "delete",
+                "path": "/guides/{id}/favorite",
+                "parameters": {
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "required": true,
+                      "description": "",
+                      "type": "string",
+                      "enable": true
+                    }
+                  ]
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {}
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "648631752",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JR3248P9S7X8DF8QCW4C5AQ4"
+                      ],
+                      "required": [],
+                      "x-apifox-refs": {
+                        "01JR3248P9S7X8DF8QCW4C5AQ4": {
+                          "$ref": "#/definitions/158054285"
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "\n| code | 内容 |\n| --- | --- |\n| 0 | 成功 |\n| 1 | 该攻略不存在 |\n| 2 | 未收藏 |\n",
+                "tags": [],
+                "status": "released",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 80,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.648631752"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "评论攻略",
+              "api": {
+                "id": "280309321",
+                "method": "post",
+                "path": "/guides/{id}/comment",
+                "parameters": {
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "required": true,
+                      "description": "",
+                      "type": "string",
+                      "enable": true
+                    }
+                  ]
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {}
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "648637882",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JR32BGR9MZC527XG6T9FFZHM"
+                      ],
+                      "x-apifox-refs": {
+                        "01JR32BGR9MZC527XG6T9FFZHM": {
+                          "$ref": "#/definitions/158054285",
+                          "x-apifox-overrides": {
+                            "data": {
+                              "type": "object",
+                              "properties": {},
+                              "x-apifox-orders": [],
+                              "title": "承载的数据"
+                            }
+                          },
+                          "required": [
+                            "data"
+                          ]
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {
+                      "content": {
+                        "type": "string",
+                        "title": "评论内容"
+                      }
+                    },
+                    "x-apifox-orders": [
+                      "content"
+                    ],
+                    "required": [
+                      "content"
+                    ]
+                  },
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "\n| code | 内容 |\n| --- | --- |\n| 0 | 成功 |\n| 1 | 被禁言，不能评论 |\n| 2 | 评论内容违规 |\n| 3 | 攻略不存在 |\n",
+                "tags": [],
+                "status": "released",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 90,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.648637882"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "删除评论攻略",
+              "api": {
+                "id": "280309588",
+                "method": "delete",
+                "path": "/guides/comment/{commentId}",
+                "parameters": {
+                  "path": [
+                    {
+                      "id": "commentId#0",
+                      "name": "commentId",
+                      "required": true,
+                      "description": "",
+                      "type": "string",
+                      "enable": true
+                    }
+                  ],
+                  "query": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {}
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "648637932",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JR32SS6F5MPKRZSA9Q964MZJ"
+                      ],
+                      "required": [],
+                      "x-apifox-refs": {
+                        "01JR32SS6F5MPKRZSA9Q964MZJ": {
+                          "$ref": "#/definitions/158054285"
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {},
+                    "x-apifox-orders": []
+                  },
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "\n| code | 内容 |\n| --- | --- |\n| 0 | 成功 |\n| 1 | 不存在 |\n| 2 | 不是你发布的 |\n",
+                "tags": [],
+                "status": "released",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 10,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.648637932"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            }
+          ]
+        },
+        {
+          "name": "个人中心",
+          "id": 53860266,
+          "auth": {},
+          "securityScheme": {},
+          "parentId": 0,
+          "serverId": "",
+          "description": "",
+          "identityPattern": {
+            "httpApi": {
+              "type": "inherit",
+              "bodyType": "",
+              "fields": []
+            }
+          },
+          "shareSettings": {},
+          "visibility": "INHERITED",
+          "preProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "postProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "inheritPostProcessors": {},
+          "inheritPreProcessors": {},
+          "items": [
+            {
+              "name": "我的收藏列表",
+              "api": {
+                "id": "280306322",
+                "method": "get",
+                "path": "/me/favorites",
+                "parameters": {
+                  "query": [
+                    {
+                      "required": false,
+                      "description": "页号",
+                      "type": "integer",
+                      "id": "08V1JKDZNw",
+                      "enable": true,
+                      "name": "page",
+                      "schema": {
+                        "type": "integer"
+                      }
+                    },
+                    {
+                      "required": false,
+                      "description": "页尺寸",
+                      "type": "integer",
+                      "id": "azLDbqY99k",
+                      "enable": true,
+                      "name": "size",
+                      "schema": {
+                        "type": "integer"
+                      }
+                    }
+                  ],
+                  "path": []
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {}
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "648632935",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JR2ZW0RTRCWNT3G8H7XNBQCW"
+                      ],
+                      "required": [],
+                      "x-apifox-refs": {
+                        "01JR2ZW0RTRCWNT3G8H7XNBQCW": {
+                          "$ref": "#/definitions/158054285",
+                          "x-apifox-overrides": {
+                            "data": {
+                              "type": "object",
+                              "properties": {},
+                              "x-apifox-orders": [
+                                "01JR2ZZGPHKK8PPMZ7ADNXS59M"
+                              ],
+                              "title": "承载的数据",
+                              "required": [],
+                              "x-apifox-refs": {
+                                "01JR2ZZGPHKK8PPMZ7ADNXS59M": {
+                                  "$ref": "#/definitions/158059832",
+                                  "x-apifox-overrides": {
+                                    "records": {
+                                      "type": [
+                                        "array",
+                                        "null"
+                                      ],
+                                      "items": {
+                                        "type": "object",
+                                        "properties": {
+                                          "id": {
+                                            "type": "integer",
+                                            "title": "攻略id"
+                                          },
+                                          "title": {
+                                            "type": "string",
+                                            "title": "标题"
+                                          },
+                                          "cover": {
+                                            "type": "string",
+                                            "format": "base64",
+                                            "title": "封面"
+                                          },
+                                          "author": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "integer",
+                                                "title": "作者id"
+                                              },
+                                              "nickname": {
+                                                "type": "string",
+                                                "title": "昵称"
+                                              },
+                                              "avatar": {
+                                                "type": "string",
+                                                "format": "base64",
+                                                "title": "头像"
+                                              }
+                                            },
+                                            "x-apifox-orders": [
+                                              "id",
+                                              "nickname",
+                                              "avatar"
+                                            ],
+                                            "title": "作者",
+                                            "required": [
+                                              "id",
+                                              "nickname",
+                                              "avatar"
+                                            ]
+                                          },
+                                          "createTime": {
+                                            "type": "string",
+                                            "title": "发布时间"
+                                          },
+                                          "likeCount": {
+                                            "type": "integer",
+                                            "title": "点赞数"
+                                          },
+                                          "favoriteCount": {
+                                            "type": "integer",
+                                            "title": "收藏数"
+                                          },
+                                          "commentCount": {
+                                            "type": "integer",
+                                            "title": "评论数"
+                                          },
+                                          "isLiked": {
+                                            "type": "boolean",
+                                            "title": "点赞过"
+                                          },
+                                          "isFavorited": {
+                                            "type": "boolean",
+                                            "title": "收藏过"
+                                          }
+                                        },
+                                        "x-apifox-orders": [
+                                          "id",
+                                          "title",
+                                          "cover",
+                                          "author",
+                                          "createTime",
+                                          "likeCount",
+                                          "favoriteCount",
+                                          "commentCount",
+                                          "isLiked",
+                                          "isFavorited"
+                                        ],
+                                        "required": [
+                                          "id",
+                                          "title",
+                                          "cover",
+                                          "author",
+                                          "createTime",
+                                          "likeCount",
+                                          "favoriteCount",
+                                          "commentCount",
+                                          "isLiked",
+                                          "isFavorited"
+                                        ]
+                                      },
+                                      "title": "数据数组"
+                                    }
+                                  },
+                                  "required": [
+                                    "records"
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          "required": [
+                            "data"
+                          ]
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "\n| code | 内容 |\n| --- | --- |\n| 0 | 成功 |\n",
+                "tags": [],
+                "status": "released",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 10,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.648632935"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "我的发布列表",
+              "api": {
+                "id": "280307910",
+                "method": "get",
+                "path": "/me/guides",
+                "parameters": {
+                  "query": [
+                    {
+                      "required": false,
+                      "description": "页号",
+                      "type": "integer",
+                      "id": "3hpjmkJrEG",
+                      "enable": true,
+                      "name": "page",
+                      "schema": {
+                        "type": "integer"
+                      }
+                    },
+                    {
+                      "required": false,
+                      "description": "页尺寸",
+                      "type": "integer",
+                      "id": "w37bHxUXz2",
+                      "enable": true,
+                      "name": "size",
+                      "schema": {
+                        "type": "integer"
+                      }
+                    },
+                    {
+                      "required": false,
+                      "description": "审核状态",
+                      "type": "string",
+                      "id": "L4THJpst8x",
+                      "enable": true,
+                      "name": "auditStatus"
+                    }
+                  ],
+                  "path": []
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {}
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "648630996",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JR30FGHZ8QNXMH5QR9W3NRX0"
+                      ],
+                      "x-apifox-refs": {
+                        "01JR30FGHZ8QNXMH5QR9W3NRX0": {
+                          "$ref": "#/definitions/158054285",
+                          "x-apifox-overrides": {
+                            "data": {
+                              "type": "object",
+                              "properties": {
+                                "": {
+                                  "type": "object",
+                                  "x-apifox-refs": {
+                                    "01JR30GNRVYFBZM26KTWZVRQNX": {
+                                      "$ref": "#/definitions/158059832",
+                                      "x-apifox-overrides": {
+                                        "records": {
+                                          "type": [
+                                            "array",
+                                            "null"
+                                          ],
+                                          "items": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "integer",
+                                                "title": "攻略id"
+                                              },
+                                              "title": {
+                                                "type": "string",
+                                                "title": "标题"
+                                              },
+                                              "cover": {
+                                                "type": "string",
+                                                "format": "base64",
+                                                "title": "封面"
+                                              },
+                                              "likeCount": {
+                                                "type": "integer",
+                                                "title": "点赞数"
+                                              },
+                                              "favoriteCount": {
+                                                "type": "integer",
+                                                "title": "收藏数"
+                                              },
+                                              "commentCount": {
+                                                "type": "integer",
+                                                "title": "评论数"
+                                              },
+                                              "createTime": {
+                                                "type": "string",
+                                                "title": "发布时间"
+                                              },
+                                              "auditStatus": {
+                                                "type": "string",
+                                                "title": "审核状态"
+                                              }
+                                            },
+                                            "x-apifox-orders": [
+                                              "id",
+                                              "title",
+                                              "cover",
+                                              "likeCount",
+                                              "favoriteCount",
+                                              "commentCount",
+                                              "createTime",
+                                              "auditStatus"
+                                            ],
+                                            "required": [
+                                              "id",
+                                              "title",
+                                              "cover",
+                                              "likeCount",
+                                              "favoriteCount",
+                                              "commentCount",
+                                              "createTime",
+                                              "auditStatus"
+                                            ]
+                                          },
+                                          "title": "数据数组"
+                                        }
+                                      },
+                                      "required": [
+                                        "records"
+                                      ]
+                                    }
+                                  },
+                                  "x-apifox-orders": [
+                                    "01JR30GNRVYFBZM26KTWZVRQNX"
+                                  ],
+                                  "properties": {}
+                                }
+                              },
+                              "x-apifox-orders": [
+                                ""
+                              ],
+                              "title": "承载的数据",
+                              "required": [
+                                ""
+                              ]
+                            }
+                          },
+                          "required": [
+                            "data"
+                          ]
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "## auditStatus\nAll 所有攻略\nPending 审核中\nApproved 已通过\nRejected 已拒绝",
+                "tags": [],
+                "status": "released",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 20,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.648630996"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "我的主页",
+              "api": {
+                "id": "280308357",
+                "method": "get",
+                "path": "/me",
+                "parameters": {
+                  "path": []
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {}
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "648626563",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JR30YHJBVPZX4ABRT4PP086Z"
+                      ],
+                      "required": [],
+                      "x-apifox-refs": {
+                        "01JR30YHJBVPZX4ABRT4PP086Z": {
+                          "$ref": "#/definitions/158054285",
+                          "x-apifox-overrides": {
+                            "data": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "integer",
+                                  "title": "用户id"
+                                },
+                                "nickname": {
+                                  "type": "string",
+                                  "title": "昵称"
+                                },
+                                "account": {
+                                  "type": "string",
+                                  "title": "账号"
+                                },
+                                "avatar": {
+                                  "type": "string",
+                                  "format": "base64",
+                                  "title": "头像"
+                                },
+                                "likesReceivedCount": {
+                                  "type": "integer",
+                                  "title": "获赞数"
+                                },
+                                "favoritesReceivedCount": {
+                                  "type": "integer",
+                                  "title": "被收藏数"
+                                },
+                                "status": {
+                                  "type": "string",
+                                  "title": "账号状态"
+                                },
+                                "role": {
+                                  "type": "string",
+                                  "title": "角色"
+                                }
+                              },
+                              "x-apifox-orders": [
+                                "id",
+                                "nickname",
+                                "account",
+                                "avatar",
+                                "likesReceivedCount",
+                                "favoritesReceivedCount",
+                                "status",
+                                "role"
+                              ],
+                              "title": "承载的数据",
+                              "required": [
+                                "id",
+                                "nickname",
+                                "account",
+                                "avatar",
+                                "likesReceivedCount",
+                                "favoritesReceivedCount",
+                                "status",
+                                "role"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "data"
+                          ]
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "released",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 30,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.648626563"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "修改密码",
+              "api": {
+                "id": "280308829",
+                "method": "post",
+                "path": "/me/password",
+                "parameters": {
+                  "path": []
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {}
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "648626568",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JR31BXSHSYWYRVTXJ2MK76PN"
+                      ],
+                      "required": [],
+                      "x-apifox-refs": {
+                        "01JR31BXSHSYWYRVTXJ2MK76PN": {
+                          "$ref": "#/definitions/158054285"
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {
+                      "newPassword": {
+                        "type": "string",
+                        "title": "新密码"
+                      },
+                      "oldPassword": {
+                        "type": "string",
+                        "title": "原密码"
+                      }
+                    },
+                    "x-apifox-orders": [
+                      "oldPassword",
+                      "newPassword"
+                    ],
+                    "required": [
+                      "oldPassword",
+                      "newPassword"
+                    ]
+                  },
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "\n| code | 内容 |\n| --- | --- |\n| 0 | 成功 |\n| 1 | 原密码错误 |\n| 2 | 原密码与新密码相同 |\n",
+                "tags": [],
+                "status": "released",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 40,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.648626568"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "修改个人信息",
+              "api": {
+                "id": "280308932",
+                "method": "post",
+                "path": "/me",
+                "parameters": {
+                  "path": []
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {}
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "648624422",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JR31JGTBQRJMWMX887Q3RM6Y"
+                      ],
+                      "x-apifox-refs": {
+                        "01JR31JGTBQRJMWMX887Q3RM6Y": {
+                          "$ref": "#/definitions/158054285",
+                          "x-apifox-overrides": {
+                            "data": {
+                              "type": "object",
+                              "properties": {
+                                "nickname": {
+                                  "type": "string",
+                                  "title": "昵称"
+                                },
+                                "avatar": {
+                                  "type": "string",
+                                  "format": "base64",
+                                  "title": "头像"
+                                }
+                              },
+                              "x-apifox-orders": [
+                                "nickname",
+                                "avatar"
+                              ],
+                              "title": "承载的数据",
+                              "required": [
+                                "nickname",
+                                "avatar"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "data"
+                          ]
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {
+                      "newNickname": {
+                        "type": "string",
+                        "title": "新昵称"
+                      },
+                      "newAvatar": {
+                        "type": "string",
+                        "format": "base64",
+                        "title": "新头像"
+                      }
+                    },
+                    "x-apifox-orders": [
+                      "newNickname",
+                      "newAvatar"
+                    ]
+                  },
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "\n| code | 内容 |\n| --- | --- |\n| 0 | 成功 |\n| 1 | 昵称违规 |\n",
+                "tags": [],
+                "status": "released",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 50,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.648624422"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            }
+          ]
+        },
+        {
+          "name": "平台管理",
+          "id": 53882575,
+          "auth": {},
+          "securityScheme": {},
+          "parentId": 0,
+          "serverId": "",
+          "description": "",
+          "identityPattern": {
+            "httpApi": {
+              "type": "inherit",
+              "bodyType": "",
+              "fields": []
+            }
+          },
+          "shareSettings": {},
+          "visibility": "INHERITED",
+          "preProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "postProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "inheritPostProcessors": {},
+          "inheritPreProcessors": {},
+          "items": [
+            {
+              "name": "获取用户信息列表",
+              "api": {
+                "id": "282880965",
+                "method": "get",
+                "path": "/admin/users",
+                "parameters": {},
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "652984044",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JRHQ9XGFPG0ZZVABGCRHXGZB"
+                      ],
+                      "required": [],
+                      "x-apifox-refs": {
+                        "01JRHQ9XGFPG0ZZVABGCRHXGZB": {
+                          "$ref": "#/definitions/158059832",
+                          "x-apifox-overrides": {
+                            "records": {
+                              "type": [
+                                "array",
+                                "null"
+                              ],
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "userId": {
+                                    "type": "integer",
+                                    "title": "用户id"
+                                  },
+                                  "nickname": {
+                                    "type": "string",
+                                    "title": "昵称"
+                                  },
+                                  "account": {
+                                    "type": "string",
+                                    "title": "账号"
+                                  },
+                                  "status": {
+                                    "type": "string",
+                                    "title": "账号状态"
+                                  },
+                                  "postCount": {
+                                    "type": "integer",
+                                    "title": "发帖数"
+                                  },
+                                  "likeReceviedCount": {
+                                    "type": "integer",
+                                    "title": "获得点赞数"
+                                  },
+                                  "favoriteReceivedCount": {
+                                    "type": "integer",
+                                    "title": "获得收藏数"
+                                  }
+                                },
+                                "x-apifox-orders": [
+                                  "userId",
+                                  "nickname",
+                                  "account",
+                                  "status",
+                                  "postCount",
+                                  "likeReceviedCount",
+                                  "favoriteReceivedCount"
+                                ],
+                                "required": [
+                                  "userId",
+                                  "nickname",
+                                  "account",
+                                  "status",
+                                  "postCount",
+                                  "likeReceviedCount",
+                                  "favoriteReceivedCount"
+                                ]
+                              },
+                              "title": "数据数组"
+                            }
+                          },
+                          "required": [
+                            "records"
+                          ]
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 10,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.652984044"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "获取待审核攻略",
+              "api": {
+                "id": "282881240",
+                "method": "get",
+                "path": "/admin/guides/audits",
+                "parameters": {},
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "652985061",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [
+                        "01JRHQM3GN41MK5DT9KXZEGHCG"
+                      ],
+                      "required": [],
+                      "x-apifox-refs": {
+                        "01JRHQM3GN41MK5DT9KXZEGHCG": {
+                          "$ref": "#/definitions/158059832",
+                          "x-apifox-overrides": {
+                            "records": {
+                              "type": [
+                                "array",
+                                "null"
+                              ],
+                              "items": {
+                                "type": "object",
+                                "properties": {},
+                                "x-apifox-orders": []
+                              },
+                              "title": "数据数组"
+                            }
+                          },
+                          "required": [
+                            "records"
+                          ]
+                        }
+                      }
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 20,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.652985061"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            }
+          ]
+        },
+        {
+          "name": "数据报表",
+          "id": 53882576,
+          "auth": {},
+          "securityScheme": {},
+          "parentId": 0,
+          "serverId": "",
+          "description": "",
+          "identityPattern": {
+            "httpApi": {
+              "type": "inherit",
+              "bodyType": "",
+              "fields": []
+            }
+          },
+          "shareSettings": {},
+          "visibility": "INHERITED",
+          "preProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "postProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "inheritPostProcessors": {},
+          "inheritPreProcessors": {},
+          "items": [
+            {
+              "name": "获取数据概览",
+              "api": {
+                "id": "285146347",
+                "method": "get",
+                "path": "/admin/overview",
+                "parameters": {},
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {}
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "656784561",
+                    "code": 200,
+                    "name": "成功",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {}
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 10,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.656784561"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "socketCollection": [],
+  "docCollection": [],
+  "webSocketCollection": [],
+  "socketIOCollection": [],
+  "responseCollection": [
+    {
+      "_databaseId": 6420157,
+      "updatedAt": "2025-04-03T17:08:02.000Z",
+      "name": "根目录",
+      "type": "root",
+      "children": [],
+      "parentId": 0,
+      "id": 6420157,
+      "ordering": [],
+      "items": []
+    }
+  ],
+  "schemaCollection": [
+    {
+      "id": 13703975,
+      "name": "根目录",
+      "visibility": "SHARED",
+      "items": [
+        {
+          "id": 13703991,
+          "name": "数据库实体",
+          "visibility": "INHERITED",
+          "items": [
+            {
+              "name": "Roles",
+              "displayName": "",
+              "id": "#/definitions/157986840",
+              "description": "",
+              "schema": {
+                "jsonSchema": {
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "name": {
+                      "type": "string",
+                      "maxLength": 255
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "name"
+                  ],
+                  "x-apifox-orders": [
+                    "id",
+                    "name"
+                  ]
+                }
+              },
+              "visibility": "INHERITED"
+            },
+            {
+              "name": "UsersStatus",
+              "displayName": "",
+              "id": "#/definitions/157986841",
+              "description": "",
+              "schema": {
+                "jsonSchema": {
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "name": {
+                      "type": "string",
+                      "maxLength": 255
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "name"
+                  ],
+                  "x-apifox-orders": [
+                    "id",
+                    "name"
+                  ]
+                }
+              },
+              "visibility": "INHERITED"
+            },
+            {
+              "name": "GuidesAuditStatus",
+              "displayName": "",
+              "id": "#/definitions/157986842",
+              "description": "",
+              "schema": {
+                "jsonSchema": {
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "name": {
+                      "type": "string",
+                      "maxLength": 255
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "name"
+                  ],
+                  "x-apifox-orders": [
+                    "id",
+                    "name"
+                  ]
+                }
+              },
+              "visibility": "INHERITED"
+            },
+            {
+              "name": "Users",
+              "displayName": "",
+              "id": "#/definitions/157986843",
+              "description": "",
+              "schema": {
+                "jsonSchema": {
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "account": {
+                      "type": "string",
+                      "maxLength": 255
+                    },
+                    "password": {
+                      "type": "string",
+                      "maxLength": 255
+                    },
+                    "rolesId": {
+                      "default": "2",
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "nickname": {
+                      "type": "string",
+                      "maxLength": 255
+                    },
+                    "avatar": {
+                      "type": "string"
+                    },
+                    "usersStatusId": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "createTime": {
+                      "default": "CURRENT_TIMESTAMP",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "account",
+                    "password",
+                    "rolesId"
+                  ],
+                  "x-apifox-orders": [
+                    "id",
+                    "account",
+                    "password",
+                    "rolesId",
+                    "nickname",
+                    "avatar",
+                    "usersStatusId",
+                    "createTime"
+                  ]
+                }
+              },
+              "visibility": "INHERITED"
+            },
+            {
+              "name": "GuidesFavorites",
+              "displayName": "",
+              "id": "#/definitions/157986844",
+              "description": "",
+              "schema": {
+                "jsonSchema": {
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "guidesId": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "usersId": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "createTime": {
+                      "default": "CURRENT_TIMESTAMP",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "guidesId",
+                    "usersId"
+                  ],
+                  "x-apifox-orders": [
+                    "id",
+                    "guidesId",
+                    "usersId",
+                    "createTime"
+                  ]
+                }
+              },
+              "visibility": "INHERITED"
+            },
+            {
+              "name": "GuidesLikes",
+              "displayName": "",
+              "id": "#/definitions/157986845",
+              "description": "",
+              "schema": {
+                "jsonSchema": {
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "guidesId": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "usersId": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "createTime": {
+                      "default": "CURRENT_TIMESTAMP",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "guidesId",
+                    "usersId"
+                  ],
+                  "x-apifox-orders": [
+                    "id",
+                    "guidesId",
+                    "usersId",
+                    "createTime"
+                  ]
+                }
+              },
+              "visibility": "INHERITED"
+            },
+            {
+              "name": "Guides",
+              "displayName": "",
+              "id": "#/definitions/157986846",
+              "description": "",
+              "schema": {
+                "jsonSchema": {
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "usersId": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "title": {
+                      "type": "string",
+                      "maxLength": 255
+                    },
+                    "cover": {
+                      "type": "string"
+                    },
+                    "content": {
+                      "type": "string"
+                    },
+                    "guidesAuditStatusId": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "createTime": {
+                      "default": "CURRENT_TIMESTAMP",
+                      "type": "string"
+                    },
+                    "auditTime": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "usersId",
+                    "title",
+                    "content",
+                    "guidesAuditStatusId"
+                  ],
+                  "x-apifox-orders": [
+                    "id",
+                    "usersId",
+                    "title",
+                    "cover",
+                    "content",
+                    "guidesAuditStatusId",
+                    "createTime",
+                    "auditTime"
+                  ]
+                }
+              },
+              "visibility": "INHERITED"
+            },
+            {
+              "name": "GuidesComments",
+              "displayName": "",
+              "id": "#/definitions/157986847",
+              "description": "",
+              "schema": {
+                "jsonSchema": {
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "guidesId": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "usersId": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "content": {
+                      "type": "string"
+                    },
+                    "createTime": {
+                      "default": "CURRENT_TIMESTAMP",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "guidesId",
+                    "usersId",
+                    "content"
+                  ],
+                  "x-apifox-orders": [
+                    "id",
+                    "guidesId",
+                    "usersId",
+                    "content",
+                    "createTime"
+                  ]
+                }
+              },
+              "visibility": "INHERITED"
+            },
+            {
+              "name": "Visits",
+              "displayName": "",
+              "id": "#/definitions/157986848",
+              "description": "",
+              "schema": {
+                "jsonSchema": {
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "usersId": {
+                      "type": "integer",
+                      "minimum": -2147483648,
+                      "maximum": 2147483647
+                    },
+                    "createTime": {
+                      "default": "CURRENT_TIMESTAMP",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "usersId"
+                  ],
+                  "x-apifox-orders": [
+                    "id",
+                    "usersId",
+                    "createTime"
+                  ]
+                }
+              },
+              "visibility": "INHERITED"
+            }
+          ]
+        },
+        {
+          "id": 13711358,
+          "name": "响应数据",
+          "visibility": "INHERITED",
+          "items": [
+            {
+              "name": "响应框架",
+              "displayName": "",
+              "id": "#/definitions/158054285",
+              "description": "",
+              "schema": {
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "title": "业务状态码"
+                    },
+                    "message": {
+                      "type": "string",
+                      "title": "业务状态码对应的详细消息"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-orders": [],
+                      "title": "承载的数据"
+                    }
+                  },
+                  "x-apifox-orders": [
+                    "code",
+                    "message",
+                    "data"
+                  ],
+                  "required": [
+                    "code",
+                    "message",
+                    "data"
+                  ]
+                }
+              },
+              "visibility": "INHERITED"
+            },
+            {
+              "name": "分页查询结果框架",
+              "displayName": "",
+              "id": "#/definitions/158059832",
+              "description": "",
+              "schema": {
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {
+                    "total": {
+                      "type": "integer",
+                      "title": "数据总数"
+                    },
+                    "page": {
+                      "type": "integer",
+                      "title": "页号"
+                    },
+                    "size": {
+                      "type": "integer",
+                      "title": "页尺寸"
+                    },
+                    "records": {
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": "object",
+                        "properties": {},
+                        "x-apifox-orders": []
+                      },
+                      "title": "数据数组"
+                    },
+                    "orders": {
+                      "type": "string",
+                      "title": "排序方法"
+                    }
+                  },
+                  "x-apifox-orders": [
+                    "total",
+                    "page",
+                    "size",
+                    "orders",
+                    "records"
+                  ],
+                  "required": [
+                    "total",
+                    "page",
+                    "size",
+                    "records",
+                    "orders"
+                  ]
+                }
+              },
+              "visibility": "INHERITED"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "securitySchemeCollection": [
+    {
+      "id": 840413,
+      "name": "根目录",
+      "items": [],
+      "ordering": []
+    }
+  ],
+  "requestCollection": [
+    {
+      "name": "根目录",
+      "children": [],
+      "ordering": [
+        "requestFolder.6502894"
+      ],
+      "items": []
+    }
+  ],
+  "apiTestCaseCollection": [
+    {
+      "name": "根目录",
+      "children": [],
+      "items": []
+    }
+  ],
+  "testCaseReferences": [],
+  "environments": [],
+  "commonScripts": [],
+  "databaseConnections": [
+    {
+      "name": "TRAVEL",
+      "type": "oracle",
+      "description": "",
+      "configs": {
+        "default": {}
+      },
+      "id": "101427"
+    }
+  ],
+  "globalVariables": [],
+  "commonParameters": null,
+  "projectSetting": {
+    "id": "6185697",
+    "auth": {},
+    "securityScheme": {},
+    "servers": [
+      {
+        "id": "default",
+        "name": "默认服务"
+      }
+    ],
+    "gateway": [],
+    "language": "zh-CN",
+    "apiStatuses": [
+      "developing",
+      "testing",
+      "released",
+      "deprecated"
+    ],
+    "mockSettings": {},
+    "preProcessors": [],
+    "postProcessors": [],
+    "advancedSettings": {
+      "enableJsonc": false,
+      "enableBigint": false,
+      "responseValidate": true,
+      "enableTestScenarioSetting": false,
+      "enableYAPICompatScript": false,
+      "isDefaultUrlEncoding": 2,
+      "publishedDocUrlRules": {
+        "defaultRule": "RESOURCE_KEY_ONLY",
+        "resourceKeyStandard": "NEW"
+      }
+    },
+    "initialDisabledMockIds": [],
+    "cloudMock": {
+      "security": "free",
+      "enable": false,
+      "tokenKey": "apifoxToken"
+    }
+  },
+  "customFunctions": [],
+  "projectAssociations": []
+}
